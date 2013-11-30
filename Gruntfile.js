@@ -347,7 +347,7 @@ module.exports = function (grunt) {
     grunt.registerTask('deploy', function() {
       grunt.task.run('build');
       grunt.util.spawn({
-        cmd: 'deploy.sh'
+        cmd: './deploy.sh'
       }, function() {
         grunt.log.ok('deployed dist directory');
       });
