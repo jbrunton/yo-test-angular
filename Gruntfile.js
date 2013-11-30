@@ -346,7 +346,12 @@ module.exports = function (grunt) {
         'build'
     ]);
     
-    grunt.registerTask('deploy', function() {
+    grunt.registerTask('deploy:remote', function() {
       shell.exec('./deploy.sh');
     });
+
+    grunt.registerTask('deploy', [
+      'build',
+      'deploy:remote'
+    ]);
 };
