@@ -17,4 +17,4 @@ You can see the initial changes to the generated yeoman project in this commit: 
 
 The app is hosted with Github Pages at [jbrunton.github.io/yo-test-foundation/](http://jbrunton.github.io/yo-test-foundation/).
 
-Deployment is handled using ```deploy.sh``` from [git-directory-deploy](https://github.com/X1011/git-directory-deploy).
+Deployment is handled using ```deploy.sh``` from [git-directory-deploy](https://github.com/X1011/git-directory-deploy) (wrapped in the ```grunt deploy``` command).
