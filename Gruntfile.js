@@ -12,6 +12,8 @@ module.exports = function (grunt) {
     require('time-grunt')(grunt);
     // load all grunt tasks
     require('load-grunt-tasks')(grunt);
+    
+    var shell = require('shelljs');
 
     grunt.initConfig({
         // configurable paths
@@ -345,13 +347,6 @@ module.exports = function (grunt) {
     ]);
     
     grunt.registerTask('deploy', function() {
-      grunt.util.spawn({
-        cmd: ['./deploy.sh'],
-        opts: {
-          stdio: 'inherit'
-        }
-      }, function() {
-        grunt.log.ok('deployed dist directory');
-      });
+      shell.exec('./deploy.sh');
     });
 };
