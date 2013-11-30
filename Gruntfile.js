@@ -343,4 +343,9 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+    
+    grunt.registerTask('heroku:production', function() {
+      grunt.option('target:dist');
+      grunt.task.run('serve');
+    });
 };
