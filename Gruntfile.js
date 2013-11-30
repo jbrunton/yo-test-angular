@@ -343,4 +343,13 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+    
+    grunt.registerTask('deploy', function() {
+      grunt.task.run('build');
+      grunt.util.spawn({
+        cmd: 'deploy.sh'
+      }, function() {
+        grunt.log.ok('deployed dist directory');
+      });
+    });
 };
