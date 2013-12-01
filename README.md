@@ -1,9 +1,24 @@
-[![Build Status](https://travis-ci.org/jbrunton/yo-test-foundation.png?branch=master)](https://travis-ci.org/jbrunton/yo-test-foundation)
-
-yo-test-foundation
+yo-test-foundation [![Build Status](https://travis-ci.org/jbrunton/yo-test-foundation.png?branch=master)](https://travis-ci.org/jbrunton/yo-test-foundation)
 ==================
 
 Trying out Yeoman, Grunt and Bower with a Foundation app
+
+## Try it out
+
+First, clone the repository:
+
+    git clone git@github.com:jbrunton/yo-test-foundation.git && cd yo-test-foundation
+    
+Make sure you have NPM installed.  If you don't, ```nvm``` is a handy script to use.  You can install it from [nvm on GitHub](https://github.com/creationix/nvm).
+
+You'll also want to have ```grunt-cli``` and ```bower``` installed:
+
+    npm install -g bower grunt-cli
+    
+Finally, install the dependencies for the app:
+
+    npm install
+    bower install
 
 ## Creating the app
 
@@ -39,4 +54,8 @@ Finally, I made a few changes to the Gruntfile in this commit: [900545d](https:/
 
 ### CI
 
-The app also has a [.travis.yml](https://github.com/jbrunton/yo-test-foundation/blob/master/.travis.yml) file to enable continuous integration with Travis.  You can see the build status [here](https://travis-ci.org/jbrunton/yo-test-foundation).
+The app also has a [.travis.yml](https://github.com/jbrunton/yo-test-foundation/blob/master/.travis.yml) file to enable continuous integration with Travis.
+
+By default, Travis runs ```npm test``` for projects using NPM.  I therefore added a test script to the package.json file: [acaca69](https://github.com/jbrunton/yo-test-foundation/commit/acaca6996af0cd61446c4c77640c58f10b13d169)
+
+You can see the build status [here](https://travis-ci.org/jbrunton/yo-test-foundation).
