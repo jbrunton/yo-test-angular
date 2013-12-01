@@ -22,6 +22,17 @@ module.exports = function (grunt) {
             dist: 'dist'
         },
         watch: {
+            js: {
+              files: ['{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js'],
+              tasks: ['newer:jshint:all']
+            },
+            jsTest: {
+              files: ['test/spec/{,*/}*.js'],
+              tasks: ['newer:jshint:test', 'karma']
+            },
+            gruntfile: {
+              files: ['Gruntfile.js']
+            },
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server', 'autoprefixer']
@@ -100,13 +111,11 @@ module.exports = function (grunt) {
                 'test/spec/{,*/}*.js'
             ]
         },
-        mocha: {
-            all: {
-                options: {
-                    run: true,
-                    urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
-                }
-            }
+        karma: {
+          unit: {
+            configFile: 'karma.conf.js',
+            singleRun: true
+          }
         },
         compass: {
             options: {
@@ -323,7 +332,7 @@ module.exports = function (grunt) {
         'concurrent:test',
         'autoprefixer',
         'connect:test',
-        'mocha'
+        'karma'
     ]);
 
     grunt.registerTask('build', [
