@@ -18,3 +18,23 @@ You can see the initial changes to the generated yeoman project in this commit: 
 The app is hosted with Github Pages at [jbrunton.github.io/yo-test-foundation/](http://jbrunton.github.io/yo-test-foundation/).
 
 Deployment is handled using ```deploy.sh``` from [git-directory-deploy](https://github.com/X1011/git-directory-deploy) (wrapped in the ```grunt deploy``` command).
+
+## Testing
+
+### Running the tests
+
+Simple: ```grunt test```.
+
+### Configuration
+
+This app replaces the default webapp choice of Mocha as a testing framework with Karma and Jasmine.  The steps to do this were:
+
+1. Uninstall mocha with ```npm uninstall --save-dev mocha```
+2. Install Karma with ```npm install --save-dev karma && npm install --save-dev grunt-karma```
+3. Create the Karma config file: ```./node_modules/.bin/karma init```
+
+Finally, I made a few changes to the Gruntfile in this commit: [900545d](https://github.com/jbrunton/yo-test-foundation/commit/900545d22ed0ac3cd816a32fa2c78b57aab1cdde).
+
+### CI
+
+The app also has a [.travis.yml](https://github.com/jbrunton/yo-test-foundation/blob/master/.travis.yml) file to enable continuous integration with Travis.  You can see the build status [here](https://travis-ci.org/jbrunton/yo-test-foundation).
