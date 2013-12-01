@@ -5,6 +5,12 @@ Trying out Yeoman, Grunt and Bower with a Foundation app
 
 ## Try it out
 
+### On the web
+
+Hit up here: [jbrunton.github.io/yo-test-angular/](http://jbrunton.github.io/yo-test-angular/).
+
+### Locally
+
 First, clone the repository:
 
     git clone git@github.com:jbrunton/yo-test-angular.git && cd yo-test-angular
