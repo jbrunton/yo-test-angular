@@ -3,10 +3,26 @@
   <p>This is a demo app built using <a href="http://yeoman.io/">Yeoman</a>, <a href="http://gruntjs.com/">Grunt</a>, <a href="http://bower.io/">Bower</a>, <a href="http://angularjs.org/">Angular</a> and <a href="http://foundation.zurb.com/">Foundation</a>.</p>
   <p>For more details see the <a href="https://github.com/jbrunton/yo-test-angular">repository on Github</a>.</p>
 
-  <p>Here's the first sample from the Angular website:</p>
+  <tabs>
+    <pane title="Try it">
+      <p>Here's the first sample from the Angular website:</p>
 
-  <label>Name:</label>
-    <input type="text" ng-model="yourName" placeholder="Enter a name here">
-    <hr>
-  <h2 ng-cloak>Hello {{yourName}}!</h2>
+      <label>Name:</label>
+        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        <hr>
+      <h3 ng-cloak>Hello {{yourName}}!</h3>
+    </pane>
+    <pane title="Get it">
+      <p>Bar</p>
+      <code>
+        git clone git@github.com:jbrunton/yo-test-angular.git && cd yo-test-angular
+        npm install
+        bower install
+      </code>
+    </pane>
+    <pane title="Learn">
+      <p>Bar</p>
+    </pane>
+  </tabs>
+  
 </div>

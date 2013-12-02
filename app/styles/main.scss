@@ -2,6 +2,9 @@ $topbar-height: 45px;
 $topbar-bg: #FFF;
 $topbar-link-color: #222;
 
+$tabs-navigation-bg-color: #FFF;
+$tabs-navigation-border-color: #CCC;
+
 @import "foundation/scss/foundation";
 
 html {
@@ -29,6 +32,23 @@ body {
   @include panel();
 }
 
-.header * {
-  display: block;
+
+
+.tabs {
+  border-bottom: 1px solid $tabs-navigation-border-color;
+}
+
+.tabs dd {
+  margin-bottom: -1px !important;;
+}
+
+.tabs dd a {
+  margin-right: 2px;
+  color: $anchor-font-color;
+}
+
+.tabs dd.active a {
+  border: 1px solid $tabs-navigation-border-color;
+  border-bottom-color: transparent;
+  color: $tabs-navigation-font-color;
 }

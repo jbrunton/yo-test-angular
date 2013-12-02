@@ -4,7 +4,8 @@ angular.module('yoTestAngularApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'components'
 ])
   .config(function ($routeProvider) {
     $routeProvider
