@@ -61,12 +61,19 @@ pre.codify {
   @include panel($bg:#fafafa);
   
   border-left-width: $panel-padding / 2;
+  overflow-x: scroll;
 }
 
 
 /*
  * Tabs
  */
+
+.tabs-content > .content {
+  // TODO: there may be a better way to achieve this, but it's to ensure that
+  // content doesn't widen to the width of the code block on smaller screens
+  width: 100%;
+}
 
 .tabs {
   border-bottom: 1px solid $tabs-navigation-border-color;
