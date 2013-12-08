@@ -1,6 +1,15 @@
 $topbar-height: 45px;
-$topbar-bg: #FFF;
+$topbar-bg: #fff;
 $topbar-link-color: #222;
+
+$topbar-dropdown-bg: #f2f2f2;
+$topbar-link-color-hover: #222;
+$topbar-link-bg-hover: #f2f2f2;
+
+$topbar-menu-link-color: #222;
+$topbar-menu-icon-color: #222;
+$topbar-menu-link-color-toggled: #222;
+$topbar-menu-icon-color-toggled: #222;
 
 $tabs-navigation-bg-color: #FFF;
 $tabs-navigation-border-color: #CCC;
@@ -15,10 +24,20 @@ body {
   margin-top: 45px;
 }
 
+
+/*
+ * Top bar
+ */
+
 .top-bar-container {
   border-bottom: 1px solid #999;
   box-shadow: 0px 0px 6px rgba(127, 127, 127, 0.6);
 }
+
+
+/*
+ * Layout
+ */
 
 .container {
   @include grid-row();
@@ -33,6 +52,9 @@ body {
 }
 
 
+/*
+ * Code
+ */
 
 .codify {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
@@ -46,6 +68,9 @@ pre.codify {
 }
 
 
+/*
+ * Tabs
+ */
 
 .tabs {
   border-bottom: 1px solid $tabs-navigation-border-color;
