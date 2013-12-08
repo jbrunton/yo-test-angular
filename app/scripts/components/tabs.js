@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('components', [])
   
   .directive('tabs', function() {
@@ -47,4 +49,4 @@ angular.module('components', [])
         '</div>',
       replace: true
     };
-  })
+  });

@@ -164,9 +164,12 @@ module.exports = function (grunt) {
         // not enabled since usemin task does concat and uglify
         // check index.html to edit your build targets
         // enable this task if you prefer defining your build targets here
-        /*uglify: {
-            dist: {}
-        },*/
+        uglify: {
+            dist: {},
+            options: {
+               mangle: false
+            }
+        },
         'bower-install': {
             app: {
                 html: '<%= yeoman.app %>/index.html',
@@ -268,6 +271,7 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*',
+                        'views/{,*/}*.html',
                         'bower_components/sass-bootstrap/fonts/*.*'
                     ]
                 }]
