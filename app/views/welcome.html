@@ -1,7 +1,17 @@
 <div class="content-full">
   <h1>Welcome</h1>
-  <p>This is a demo app built using <a href="http://yeoman.io/">Yeoman</a>, <a href="http://gruntjs.com/">Grunt</a>, <a href="http://bower.io/">Bower</a>, <a href="http://angularjs.org/">Angular</a> and <a href="http://foundation.zurb.com/">Foundation</a>.</p>
-  <p>For more details see the <a href="https://github.com/jbrunton/yo-test-angular">repository on Github</a>.</p>
+  
+  <div class="panel">
+  <p>This is a demo <a href="http://en.wikipedia.org/wiki/Single-page_application">single page app</a>.</p>
+  
+  <ul>
+    <li>It's built using <a href="http://yeoman.io/">Yeoman</a>, <a href="http://gruntjs.com/">Grunt</a>, <a href="http://bower.io/">Bower</a> and <a href="http://angularjs.org/">Angular</a>.</li>
+    <li>It's styled using <a href="http://foundation.zurb.com/">Foundation</a> (so it's <a href="http://en.wikipedia.org/wiki/Responsive_web_design">responsive</a>) and <a href="http://sass-lang.com/">Sass</a>.</li>
+    <li>It's unit testable, with continuous integration running on <a href="https://travis-ci.org/jbrunton/yo-test-angular">Travis</a></li>
+  </ul>
+
+  <p>For more details see the <a href="https://github.com/jbrunton/yo-test-angular">repository on Github</a>. Try it out below.</p>
+  </div>
 
   <tabs>
     <pane title="Try it">
@@ -13,12 +23,11 @@
       <h3 ng-cloak>Hello {{yourName}}!</h3>
     </pane>
     <pane title="Get it">
-      <p>Bar</p>
-      <code>
-        git clone git@github.com:jbrunton/yo-test-angular.git && cd yo-test-angular
-        npm install
-        bower install
-      </code>
+      <p>To run it locally, you'll need <a href="http://nodejs.org/">Node.js</a> installed.  (If you don't have it, check out the instructions on the wiki.)</p>
+      <p>Then run:</p>
+<pre class="codify">git clone git@github.com:jbrunton/yo-test-angular.git && cd yo-test-angular
+npm install
+bower install</pre>
     </pane>
     <pane title="Learn">
       <p>Bar</p>

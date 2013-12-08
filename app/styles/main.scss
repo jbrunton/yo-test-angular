@@ -34,6 +34,19 @@ body {
 
 
 
+.codify {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 14px;
+}
+
+pre.codify {
+  @include panel($bg:#fafafa);
+  
+  border-left-width: $panel-padding / 2;
+}
+
+
+
 .tabs {
   border-bottom: 1px solid $tabs-navigation-border-color;
 }
