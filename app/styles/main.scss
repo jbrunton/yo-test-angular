@@ -16,14 +16,6 @@ $tabs-navigation-border-color: #CCC;
 
 @import "foundation/scss/foundation";
 
-html {
-  overflow-y: scroll;
-}
-
-body {
-  margin-top: 45px;
-}
-
 
 /*
  * Top bar
@@ -38,6 +30,10 @@ body {
 /*
  * Layout
  */
+
+html {
+  overflow-y: scroll;
+}
 
 .container {
   @include grid-row();
