@@ -1,8 +1,8 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html ng-app="" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html ng-app="yoTestAngularApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html ng-app="yoTestAngularApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html ng-app="yoTestAngularApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html ng-app="yoTestAngularApp" class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,34 +10,43 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/4e0cf82a.main.css"/>
+        <link rel="stylesheet" href="styles/bf993b95.main.css"/>
         <script src="scripts/vendor/d7100892.modernizr.js"></script>
     </head>
     <body>
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-
-        <div class="container">
-          <h1>Yeoman Angular Test</h1>
         
-          <div class="callout-box">
-            <p>This is a demo app built using <a href="http://yeoman.io/">Yeoman</a>, <a href="http://gruntjs.com/">Grunt</a>, <a href="http://bower.io/">Bower</a>, <a href="http://angularjs.org/">Angular</a> and <a href="http://foundation.zurb.com/">Foundation</a>.</p>
-            <p>For more details see the <a href="https://github.com/jbrunton/yo-test-angular">repository on Github</a>.</p>
-          </div>
-          
-          <p>Here's the first sample from the Angular website:</p>
-
-          <label>Name:</label>
-                <input type="text" ng-model="yourName" placeholder="Enter a name here">
-                <hr>
-          <h2 ng-cloak="">Hello {{yourName}}!</h2>
+        <div class="top-bar-container contain-to-grid fixed">
+          <nav class="top-bar" data-topbar="">
+            <ul class="title-area">
+              <li class="name">
+                <h1><a href="#">Yeoman Foundation Test</a></h1>
+              </li>
+              <li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+            </ul>
+            <section class="top-bar-section">
+              <ul class="right">
+                <li><a href="/#/about">About</a></li>
+              </ul>
+            </section>
+          </nav>
         </div>
 
+        <!-- Add your site or application content here -->
+        <div class="container" ng-view=""></div>
 
-        <script src="scripts/7d5f6d11.vendor.js"></script>
+        <script src="scripts/8bca0cb9.vendor.js"></script>
 
+        <script src="scripts/97598b41.modules.js"></script>
+        
+        <script src="scripts/d575adf4.scripts.js"></script>
+
+        <script>
+          $(document).foundation();
+        </script>
+        
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -47,7 +56,5 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
-
-        <script src="scripts/b6c3df09.main.js"></script>
 </body>
 </html>
