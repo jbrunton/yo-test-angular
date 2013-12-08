@@ -86,6 +86,10 @@ pre.codify {
 .tabs dd a {
   margin-right: 2px;
   color: $anchor-font-color;
+  
+  @media #{$small-only} {
+    padding: 5px 10px;
+  }
 }
 
 .tabs dd.active a {
