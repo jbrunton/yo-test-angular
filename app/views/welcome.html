@@ -18,9 +18,31 @@
       <p>Here's the first sample from the Angular website:</p>
 
       <label>Name:</label>
-        <input type="text" ng-model="yourName" placeholder="Enter a name here">
-        <hr>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
       <h3 ng-cloak>Hello {{yourName}}!</h3>
+      
+      <hr>
+      
+      <p>Here's a simple filter which returns the fibonacci number for its input:
+
+      <table>
+        <tr>
+          <td width="150">fib 0</dd>
+          <td width="150">{{ 0 | fib}}</td>
+        </tr>
+        <tr>
+          <td>fib 1</dd>
+          <td>{{ 1 | fib}}</td>
+        </tr>
+        <tr>
+          <td>fib 5</dd>
+          <td>{{ 5 | fib}}</td>
+        </tr>
+        <tr>
+          <td>fib 9</dd>
+          <td>{{ 9 | fib}}</td>
+        </tr>
+      </table>
     </pane>
     <pane title="Get it">
       <p>To run it locally, you'll need <a href="http://nodejs.org/">Node.js</a> installed.  (If you don't have it, check out the instructions on the wiki.)</p>
