@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('components', [])
+angular.module('components')
   
   .filter('fib', function() {
     return function(n){

@@ -1,0 +1,2 @@
+require('./about');
+require('./welcome');
