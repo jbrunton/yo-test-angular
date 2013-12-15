@@ -9,8 +9,7 @@ module.exports = function(config) {
 
 
     // frameworks to use
-    frameworks: ['jasmine'],
-
+    frameworks: ['jasmine', 'browserify'],
 
     // list of files / patterns to load in the browser
     files: [
@@ -20,12 +19,16 @@ module.exports = function(config) {
       'app/bower_components/angular-cookies/angular-cookies.js',
       'app/bower_components/angular-sanitize/angular-sanitize.js',
       'app/bower_components/angular-route/angular-route.js',
-      'app/scripts/*.js',
-      'app/scripts/**/*.js',
-      'test/mock/**/*.js',
+      'app/scripts/app.js',
+      // 'app/scripts/**/*.js',
+      // 'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
 
+    preprocessors: {
+      'app/scripts/**/*.js': ['browserify'],
+      //'test/spec/**/*.js': ['browserify']
+    },
 
     // list of files to exclude
     exclude: [
@@ -64,6 +67,8 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
     browsers: ['PhantomJS'],
+    
+    browserify: true,
 
 
     // If browser does not capture in given timeout [ms], kill it
