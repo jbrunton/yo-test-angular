@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         watch: {
             js: {
               files: ['{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js'],
-              tasks: ['newer:jshint:all']
+              tasks: ['newer:jshint:all', 'browserify']
             },
             jsTest: {
               files: ['test/spec/{,*/}*.js'],
@@ -188,6 +188,12 @@ module.exports = function (grunt) {
                 }
             }
         },
+        browserify: {
+            basic: {
+                src: ['<%= yeoman.app %>/scripts/**/*.js'],
+                dest: '.tmp/scripts/application.js'
+            }
+        },
         useminPrepare: {
             options: {
                 dest: '<%= yeoman.dist %>'
@@ -297,17 +303,20 @@ module.exports = function (grunt) {
         concurrent: {
             server: [
                 'compass',
-                'copy:styles'
+                'copy:styles',
+                'browserify'
             ],
             test: [
-                'copy:styles'
+                'copy:styles',
+                'browserify'
             ],
             dist: [
                 'compass',
                 'copy:styles',
                 'imagemin',
                 'svgmin',
-                'htmlmin'
+                'htmlmin',
+                'browserify'
             ]
         }
     });
