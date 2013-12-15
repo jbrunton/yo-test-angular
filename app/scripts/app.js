@@ -1,5 +1,11 @@
 'use strict';
 
+// require('bower_componentangular/angular');
+
+// Relative paths to include services.js and filters.js into your bundle
+require('./components/fib');
+require('./components/tabs');
+
 angular.module('yoTestAngularApp', [
   'ngCookies',
   'ngResource',
@@ -23,3 +29,6 @@ angular.module('yoTestAngularApp', [
         redirectTo: '/'
       });
   });
+
+require('./controllers/welcome');
+require('./controllers/about');
