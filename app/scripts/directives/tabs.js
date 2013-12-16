@@ -2,7 +2,7 @@
 
 var tabsModule = angular.module('directives.tabs', []);
 
-var TabsController = function($scope, $element) {
+tabsModule.controller('TabsController', function($scope) {
   var panes = $scope.panes = [];
 
   $scope.select = function(pane) {
@@ -16,14 +16,14 @@ var TabsController = function($scope, $element) {
     if (panes.length == 0) $scope.select(pane);
     panes.push(pane);
   }
-};
+});
   
 tabsModule.directive('tabs', function() {
   return {
     restrict: 'E',
     transclude: true,
     scope: {},
-    controller: TabsController,
+    controller: 'TabsController',
     template:
     '<div>' +
       '<dl class="tabs">' +

@@ -3,7 +3,7 @@
 // content is based on https://github.com/vojtajina/ng-directive-testing/blob/master/test/tabsSpec.js
 
 (function() {
-  describe('Directive: tabs', function() {
+  describe ('Directive: tabs', function() {
 
     beforeEach(module('directives.tabs'));
 
@@ -44,24 +44,24 @@
       });
     });
 
-    it('should create titles for the tabs', function() {
+    it ('should create titles for the tabs', function() {
       expect(titles.length).toBe(2);
       expect(titles.eq(0).text()).toBe('Tab One');
       expect(titles.eq(1).text()).toBe('Tab Two');
     });
     
-    it('should create content for the tabs', function() {
+    it ('should create content for the tabs', function() {
       expect(contents.length).toBe(2);
       expect(contents.eq(0).text()).toBe('Tab One Content');
       expect(contents.eq(1).text()).toBe('Tab Two Content');
     });
     
-    it('should make the first tab active by default', function() {
+    it ('should make the first tab active by default', function() {
       expect(tabs.eq(0)).toHaveClass('active');
       expect(tabs.eq(1)).not.toHaveClass('active');
     });
     
-    it('should make the first content div active by default', function() {
+    it ('should make the first content div active by default', function() {
       expect(contents.eq(0)).toHaveClass('active');
       expect(contents.eq(1)).not.toHaveClass('active');
     });
@@ -74,6 +74,65 @@
       
       expect(contents.eq(0)).not.toHaveClass('active');
       expect(contents.eq(1)).toHaveClass('active');
+    });
+  });
+  
+  describe ('TabsController', function() {
+    var $scope, controller;
+    
+    beforeEach(module('directives.tabs'));
+
+    beforeEach(inject(function($controller, $rootScope) {
+      $scope = $rootScope.$new();
+      controller = $controller('TabsController', { $scope: $scope });
+    }));
+    
+    describe ('#select', function() {
+      it ('should mark the given pane as selected', function() {
+        var pane = {};
+        controller.addPane(pane);
+
+        $scope.select(pane);
+
+        expect(pane.selected).toBe(true);
+      });
+      
+      it ('should deselect the other panes', function() {
+        var pane1 = { selected: true }, pane2 = {};
+        controller.addPane(pane1);
+        controller.addPane(pane2);
+        
+        $scope.select(pane2);
+        
+        expect(pane1.selected).toBe(false);
+        expect(pane2.selected).toBe(true);
+      });
+    });
+    
+    describe ('#addPane', function() {
+      var pane1, pane2;
+      
+      beforeEach(function() {
+        pane1 = {};
+        pane2 = {};
+      });
+      
+      it ('appends the given pane to the scope', function() {
+        expect($scope.panes).toEqual([]);
+        
+        controller.addPane(pane1);
+        expect($scope.panes).toEqual([pane1]);
+        
+        controller.addPane(pane2);
+        expect($scope.panes).toEqual([pane1, pane2]);
+      });
+      
+      it ('selects the first pane', function() {
+        controller.addPane(pane1);
+        controller.addPane(pane2);
+        expect(pane1.selected).toBeTruthy();
+        expect(pane2.selected).toBeFalsy();
+      });
     });
   });
 })();
