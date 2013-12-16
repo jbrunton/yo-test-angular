@@ -6,7 +6,7 @@
   describe('Directive: tabs', function() {
 
     // load the filter's module
-    beforeEach(module('components'));
+    beforeEach(module('tabs'));
 
     // instantiate filter
     var elm, scope, tabs, titles, contents;
