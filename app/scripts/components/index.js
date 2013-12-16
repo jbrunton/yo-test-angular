@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module('components', []);
+angular.module('components', [
+  'components.tabs'
+]);
 
 require('./fib');
-// require('./tabs');
+require('./tabs');
