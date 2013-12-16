@@ -1,6 +1,6 @@
 'use strict';
 
-var tabsModule = angular.module('tabs', []);
+var tabsModule = angular.module('directives.tabs', []);
   
 tabsModule.directive('tabs', function() {
   return {

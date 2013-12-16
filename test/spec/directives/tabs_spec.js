@@ -5,10 +5,8 @@
 (function() {
   describe('Directive: tabs', function() {
 
-    // load the filter's module
-    beforeEach(module('tabs'));
+    beforeEach(module('directives.tabs'));
 
-    // instantiate filter
     var elm, scope, tabs, titles, contents;
     beforeEach(inject(function($rootScope, $compile) {
       // we might move this tpl into an html file as well...

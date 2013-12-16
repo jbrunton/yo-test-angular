@@ -11,7 +11,8 @@ angular.module('yoTestAngularApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'components'
+  'components',
+  'directives'
 ]);
 
 require('./config');
